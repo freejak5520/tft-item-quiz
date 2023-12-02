@@ -2,11 +2,15 @@
 
 import { useCallback, useEffect, useState } from "react";
 import useItems from "@/hooks/useItems";
+import styled from "@emotion/styled";
+import Item from "@/components/Item";
 
 export default function Home() {
   const { baseItems, getRandomBuildItem, getItemById } = useItems();
   const [quizItem, setQuizItem] = useState<Item | null>(null);
   const [selectItems, setSelectItems] = useState<Item[]>([]);
+
+  const [disabled, setDisabled] = useState(false);
 
   const startQuiz = useCallback(() => {
     setQuizItem(getRandomBuildItem());
@@ -33,16 +37,19 @@ export default function Home() {
       return;
     }
 
-    console.log(selectItems);
+    setDisabled(true);
 
-    if (checkResult()) {
-      alert("정답입니다.");
-    } else {
-      alert("오답입니다.");
-    }
+    setTimeout(() => {
+      if (checkResult()) {
+        alert("정답입니다.");
+      } else {
+        alert("오답입니다.");
+      }
 
-    setSelectItems([]);
-    startQuiz();
+      setSelectItems([]);
+      startQuiz();
+      setDisabled(false);
+    }, 1);
   }, [checkResult, selectItems, startQuiz]);
 
   useEffect(() => {
@@ -52,36 +59,52 @@ export default function Home() {
   }, [startQuiz]);
 
   return (
-    <div>
-      <div>
-        <div>{quizItem?.name}</div>
+    <>
+      <div className="w-full h-full bg-black "></div>
+      <div className="container mx-auto md:px-12">
+        <div className="flex justify-center py-6">
+          {quizItem && <Item item={quizItem} />}
+        </div>
+        <hr />
+        <div className="flex gap-2 justify-center p-6 h-48">
+          {selectItems.map((item) => (
+            <Item
+              key={item.id}
+              onClick={() => {
+                if (disabled) return;
+
+                setSelectItems((prev) => {
+                  return prev.filter((value) => value.id != item.id);
+                });
+              }}
+              item={item}
+            />
+          ))}
+        </div>
+        <hr />
+        <div className="flex gap-2 cursor-pointer justify-center py-6">
+          {baseItems.map((item: Item) => (
+            <Item
+              key={item.id}
+              onClick={() => {
+                if (disabled) return;
+
+                setSelectItems((prev) => {
+                  return [...prev, item];
+                });
+              }}
+              item={item}
+            />
+          ))}
+        </div>
       </div>
-      <hr />
-      {selectItems.map((item) => (
-        <div
-          key={item.id}
-          onClick={() => {
-            setSelectItems((prev) => {
-              return prev.filter((value) => value.id != item.id);
-            });
-          }}
-        >
-          {item.name}
-        </div>
-      ))}
-      <hr />
-      {baseItems.map((item: Item) => (
-        <div
-          key={item.id}
-          onClick={() => {
-            setSelectItems((prev) => {
-              return [...prev, item];
-            });
-          }}
-        >
-          {item.name}
-        </div>
-      ))}
-    </div>
+    </>
   );
 }
+
+const QuestionSection = styled.div``;
+
+const Container = styled.div`
+  max-width: 720px;
+  margin: 0 auto;
+`;
