@@ -141,7 +141,12 @@
       "image": "TFT_Item_LastWhisper.png",
       "baseItems": [2, 8]
     },
-    { "id": 29, "name": "8비트 상징", "image": "", "baseItems": [2, 9] },
+    {
+      "id": 29,
+      "name": "8비트 상징",
+      "image": "TFT10_Item_8bitEmblem.png",
+      "baseItems": [2, 9]
+    },
     {
       "id": 33,
       "name": "덤불 조끼",
