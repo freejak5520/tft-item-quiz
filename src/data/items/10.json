@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "B.F. 대검",
+      "image": ""
+    },
+    {
+      "id": 2,
+      "name": "곡궁",
+      "image": ""
+    },
+    { "id": 3, "name": "쇠사슬 조끼", "image": "" },
+    { "id": 4, "name": "음전자 망토", "image": "" },
+    { "id": 5, "name": "쓸데없이 큰 지팡이", "image": "" },
+    { "id": 6, "name": "여신의 눈물", "image": "" },
+    { "id": 7, "name": "거인의 허리띠", "image": "" },
+    { "id": 8, "name": "연습용 장갑", "image": "" },
+    { "id": 9, "name": "뒤집개", "image": "" },
+
+    { "id": 11, "name": "죽음의 검", "image": "", "baseItems": [1, 1] },
+    { "id": 12, "name": "거인 학살자", "image": "", "baseItems": [1, 2] },
+    { "id": 13, "name": "밤의 끝자락", "image": "", "baseItems": [1, 3] },
+    { "id": 14, "name": "피바라기", "image": "", "baseItems": [1, 4] },
+    { "id": 15, "name": "마법공학 총검", "image": "", "baseItems": [1, 5] },
+    { "id": 16, "name": "쇼진의 창", "image": "", "baseItems": [1, 6] },
+    { "id": 17, "name": "스테락의 도전", "image": "", "baseItems": [1, 7] },
+    { "id": 18, "name": "무한의 대검", "image": "", "baseItems": [1, 8] },
+    { "id": 19, "name": "True Damage 상징", "image": "", "baseItems": [1, 9] },
+
+    { "id": 22, "name": "붉은 덩굴정령", "image": "", "baseItems": [2, 2] },
+    { "id": 23, "name": "거인의 결의", "image": "", "baseItems": [2, 3] },
+    { "id": 24, "name": "루난의 허리케인", "image": "", "baseItems": [2, 4] },
+    { "id": 25, "name": "구인수의 격노검", "image": "", "baseItems": [2, 5] },
+    { "id": 26, "name": "스태틱의 단검", "image": "", "baseItems": [2, 6] },
+    { "id": 27, "name": "내셔의 이빨", "image": "", "baseItems": [2, 7] },
+    { "id": 28, "name": "최후의 속삭임", "image": "", "baseItems": [2, 8] },
+    { "id": 29, "name": "8비트 상징", "image": "", "baseItems": [2, 9] },
+
+    { "id": 33, "name": "덤불 조끼", "image": "", "baseItems": [3, 3] },
+    { "id": 34, "name": "가고일 돌갑옷", "image": "", "baseItems": [3, 4] },
+    { "id": 35, "name": "크라운가드", "image": "", "baseItems": [3, 5] },
+    { "id": 36, "name": "수호자의 맹세", "image": "", "baseItems": [3, 6] },
+    { "id": 37, "name": "태양불꽃 망토", "image": "", "baseItems": [3, 7] },
+    { "id": 38, "name": "굳건한 심장", "image": "", "baseItems": [3, 8] },
+    { "id": 39, "name": "펜타킬 상징", "image": "", "baseItems": [3, 9] },
+
+    { "id": 44, "name": "용의 발톱", "image": "", "baseItems": [4, 4] },
+    { "id": 45, "name": "이온 충격기", "image": "", "baseItems": [4, 5] },
+    { "id": 46, "name": "적응형 투구", "image": "", "baseItems": [4, 6] },
+    { "id": 47, "name": "저녁갑주", "image": "", "baseItems": [4, 7] },
+    { "id": 48, "name": "수은", "image": "", "baseItems": [4, 8] },
+    { "id": 49, "name": "재즈 상징", "image": "", "baseItems": [4, 9] },
+
+    {
+      "id": 55,
+      "name": "라바돈의 죽음모자",
+      "image": "",
+      "baseItems": [5, 5]
+    },
+    { "id": 56, "name": "대천사의 지팡이", "image": "", "baseItems": [5, 6] },
+    { "id": 57, "name": "모렐로노미콘", "image": "", "baseItems": [5, 7] },
+    { "id": 58, "name": "보석 건틀릿", "image": "", "baseItems": [5, 8] },
+    { "id": 59, "name": "K/DA 상징", "image": "", "baseItems": [5, 9] },
+
+    { "id": 66, "name": "푸른 파수꾼", "image": "", "baseItems": [6, 6] },
+    { "id": 67, "name": "구원", "image": "", "baseItems": [6, 7] },
+    { "id": 68, "name": "정의의 손길", "image": "", "baseItems": [6, 8] },
+    { "id": 69, "name": "이모코어 상징", "image": "", "baseItems": [6, 9] },
+
+    { "id": 77, "name": "워모그의 갑옷", "image": "", "baseItems": [7, 7] },
+    { "id": 78, "name": "방패파괴자", "image": "", "baseItems": [7, 8] },
+    { "id": 79, "name": "Heartsteel 상징", "image": "", "baseItems": [7, 9] },
+
+    { "id": 88, "name": "도적의 장갑", "image": "", "baseItems": [8, 8] },
+    { "id": 89, "name": "펑크 상징", "image": "", "baseItems": [8, 9] },
+
+    { "id": 99, "name": "전략가의 왕관", "image": "", "baseItems": [9, 9] }
+  ]
+}
