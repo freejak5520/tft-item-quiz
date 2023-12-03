@@ -1,13 +1,27 @@
-import { useCallback, useMemo } from "react";
-import items from "../data/items/10.json";
+import { useCallback, useEffect, useMemo, useState } from "react";
+
+const fetchData = async () => {
+  const response = await fetch("/api/items");
+  const responseData = await response.json();
+  return responseData as Item[];
+};
 
 const useItems = () => {
+  const [items, setItems] = useState<Item[]>([]);
+
+  useEffect(() => {
+    fetchData().then((data) => {
+      setItems(data);
+    });
+  }, []);
+
   const baseItems = useMemo(() => {
-    return items.data.filter((item) => item.id >= 1 && item.id <= 9);
-  }, []);
+    return items.filter((item) => item.id >= 1 && item.id <= 9) ?? [];
+  }, [items]);
+
   const buildItems = useMemo(() => {
-    return items.data.filter((item) => item.id > 9);
-  }, []);
+    return items.filter((item) => item.id > 9);
+  }, [items]);
 
   const getRandomItem = (itemList: Item[]) => {
     const randomIndex = Math.floor(Math.random() * itemList.length);
@@ -25,11 +39,11 @@ const useItems = () => {
   );
 
   const getItemById = useCallback(
-    (id: number) => items.data.find((item) => item.id === id),
-    []
+    (id: number) => items.find((item) => item.id === id),
+    [items]
   );
 
-  return {
+  const resultData = {
     items,
     baseItems,
     buildItems,
@@ -37,6 +51,8 @@ const useItems = () => {
     getRandomBuildItem,
     getItemById,
   };
+
+  return resultData;
 };
 
 export default useItems;
