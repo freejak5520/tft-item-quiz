@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useState } from "react";
 import useItems from "@/hooks/useItems";
-import styled from "@emotion/styled";
 import Item from "@/components/Item";
 
 export default function Home() {
@@ -12,6 +11,7 @@ export default function Home() {
   const [disabled, setDisabled] = useState(false);
   const [alertVisible, setAlertVisible] = useState(false);
   const [alertText, setAlertText] = useState("");
+  const [answer, setAnswer] = useState<number[]>([]);
 
   const startQuiz = useCallback(() => {
     setQuizItem(getRandomBuildItem());
@@ -22,8 +22,11 @@ export default function Home() {
       alert("정답 확인 불가능");
     }
 
-    const sorted = selectItems.sort();
+    const sorted = selectItems.sort((a, b) => {
+      return a.id - b.id;
+    });
     const itemId = Number(`${sorted[0].id}${sorted[1].id}`);
+    console.log(sorted, itemId);
 
     const selectItem = getItemById(itemId);
 
@@ -42,6 +45,7 @@ export default function Home() {
 
     setTimeout(() => {
       setAlertText(checkResult() ? "정답입니다." : "오답입니다.");
+      setAnswer(quizItem?.baseItems ?? []);
       setAlertVisible(true);
 
       setTimeout(() => {
@@ -51,7 +55,7 @@ export default function Home() {
         setDisabled(false);
       }, 1000);
     }, 1);
-  }, [checkResult, selectItems, startQuiz]);
+  }, [checkResult, quizItem, selectItems, startQuiz]);
 
   useEffect(() => {
     if (!startQuiz) return;
@@ -62,10 +66,16 @@ export default function Home() {
   return (
     <>
       {alertVisible && (
-        <div className="fixed left-0 top-0 w-full h-full">
+        <div className="fixed left-0 top-0 w-full h-screen">
           <div className="flex flex-col items-center justify-center min-h-full bg-black bg-opacity-50">
-            <div className="rounded shadow bg-gray-200 bg-opacity-75 p-12">
-              {alertText}
+            <div className="rounded shadow bg-gray-200 bg-opacity-75 p-12 text-center">
+              <div className="text-lg font-bold mb-4">{alertText}</div>
+              <div className="flex gap-1">
+                {answer.map((id, index) => {
+                  const item = getItemById(id);
+                  return item && <Item key={`${index}_${id}`} item={item} />;
+                })}
+              </div>
             </div>
           </div>
         </div>
@@ -79,9 +89,9 @@ export default function Home() {
           <div className="border-b-2 border-gray-500"></div>
 
           <div className="flex gap-2 justify-center items-center py-12 h-44">
-            {selectItems.map((item) => (
+            {selectItems.map((item, index) => (
               <Item
-                key={item.id}
+                key={`${index}_${item.id}`}
                 onClick={() => {
                   if (disabled) return;
 
@@ -116,10 +126,3 @@ export default function Home() {
     </>
   );
 }
-
-const QuestionSection = styled.div``;
-
-const Container = styled.div`
-  max-width: 720px;
-  margin: 0 auto;
-`;
