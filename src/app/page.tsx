@@ -15,7 +15,6 @@ export default function Home() {
 
   const startQuiz = useCallback(() => {
     setQuizItem(getRandomBuildItem());
-    // setQuizItem(getItemById(56));
   }, [getRandomBuildItem]);
 
   const checkResult = useCallback(() => {
@@ -67,11 +66,13 @@ export default function Home() {
   return (
     <>
       {alertVisible && (
-        <div className="fixed left-0 top-0 w-full h-screen">
-          <div className="flex flex-col items-center justify-center min-h-full bg-black bg-opacity-50">
-            <div className="rounded shadow bg-gray-200 bg-opacity-75 p-12 text-center">
-              <div className="text-lg font-bold mb-4">{alertText}</div>
-              <div className="flex gap-1">
+        <div className="fixed left-0 top-0 z-50 h-screen w-full">
+          <div className="flex min-h-full flex-col items-center justify-center bg-black bg-opacity-50">
+            <div className="rounded bg-gray-100 bg-opacity-95 p-16 text-center shadow">
+              <div className="mb-8 text-xl font-bold text-gray-900">
+                {alertText}
+              </div>
+              <div className="flex gap-4">
                 {answer.map((id, index) => {
                   const item = getItemById(id);
                   return item && <Item key={`${index}_${id}`} item={item} />;
@@ -81,33 +82,54 @@ export default function Home() {
           </div>
         </div>
       )}
-      <div className="container mx-auto flex flex-col justify-center h-screen">
-        <div className="px-12 bg-gray-700 rounded shadow">
-          <div className="flex justify-center py-12 h-fit">
-            {quizItem && <Item item={quizItem} />}
-          </div>
-
-          <div className="border-b-2 border-gray-500"></div>
-
-          <div className="flex gap-2 justify-center items-center py-12 h-44">
-            {selectItems.map((item, index) => (
+      <div className="container mx-auto flex h-screen flex-col justify-center">
+        <div className="h-screen rounded bg-gray-50 p-16 shadow md:h-auto">
+          <h1 className="text-center text-3xl font-bold text-gray-900">
+            아이템 조합 퀴즈
+          </h1>
+          <div className="flex h-fit items-center justify-center py-12">
+            {selectItems[0] ? (
               <Item
-                key={`${index}_${item.id}`}
                 onClick={() => {
                   if (disabled) return;
 
                   setSelectItems((prev) => {
-                    return prev.filter((value) => value.id != item.id);
+                    return prev.filter(
+                      (value) => value.id != selectItems[0].id,
+                    );
                   });
                 }}
-                item={item}
+                item={selectItems[0]}
+                size={70}
               />
-            ))}
+            ) : (
+              <Item size={70} />
+            )}
+            <Operator>+</Operator>
+            {selectItems[1] ? (
+              <Item
+                onClick={() => {
+                  if (disabled) return;
+
+                  setSelectItems((prev) => {
+                    return prev.filter(
+                      (value) => value.id != selectItems[1].id,
+                    );
+                  });
+                }}
+                item={selectItems[1]}
+                size={70}
+              />
+            ) : (
+              <Item size={70} />
+            )}
+            <Operator>=</Operator>
+            {quizItem && <Item item={quizItem} size={70} />}
           </div>
 
-          <div className="border-b-2 border-gray-500"></div>
+          <div className="border-b-2 border-gray-300"></div>
 
-          <div className="flex gap-2 cursor-pointer justify-center py-12 flex-wrap">
+          <div className="flex cursor-pointer flex-wrap justify-center gap-2 py-12">
             {baseItems.map((item: Item) => (
               <Item
                 key={item.id}
@@ -119,6 +141,7 @@ export default function Home() {
                   });
                 }}
                 item={item}
+                size={70}
               />
             ))}
           </div>
@@ -127,3 +150,7 @@ export default function Home() {
     </>
   );
 }
+
+const Operator = ({ children }: { children?: React.ReactNode }) => (
+  <div className="p-4 text-xl text-gray-950">{children}</div>
+);
