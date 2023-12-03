@@ -27,7 +27,7 @@ const Item = ({ item, onClick, active = false, size = 75 }: Props) => {
         />
       ) : (
         <Image
-          src={"/img/items/none.png"}
+          src={"/img/items/gray.png"}
           width={size}
           height={size}
           alt="none"
