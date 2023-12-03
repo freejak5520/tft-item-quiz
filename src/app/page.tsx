@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import useItems from "@/hooks/useItems";
 import Item from "@/components/Item";
+import AnswerAlert from "@/components/AnswerAlert";
 
 export default function Home() {
   const { baseItems, getRandomBuildItem, getItemById } = useItems();
@@ -66,21 +67,10 @@ export default function Home() {
   return (
     <>
       {alertVisible && (
-        <div className="fixed left-0 top-0 z-50 h-screen w-full">
-          <div className="flex min-h-full flex-col items-center justify-center bg-black bg-opacity-50">
-            <div className="rounded bg-gray-100 bg-opacity-95 p-16 text-center shadow dark:bg-gray-900">
-              <div className="mb-8 text-xl font-bold text-gray-900 dark:text-gray-100">
-                {alertText}
-              </div>
-              <div className="flex gap-4">
-                {answer.map((id, index) => {
-                  const item = getItemById(id);
-                  return item && <Item key={`${index}_${id}`} item={item} />;
-                })}
-              </div>
-            </div>
-          </div>
-        </div>
+        <AnswerAlert
+          text={alertText}
+          answer={answer.map((id) => getItemById(id)) as Item[]}
+        />
       )}
       <div className="container mx-auto flex h-screen flex-col justify-center">
         <div className="h-screen rounded bg-gray-50 p-16 shadow dark:bg-gray-950 md:h-auto">
