@@ -15,6 +15,7 @@ export default function Home() {
 
   const startQuiz = useCallback(() => {
     setQuizItem(getRandomBuildItem());
+    // setQuizItem(getItemById(56));
   }, [getRandomBuildItem]);
 
   const checkResult = useCallback(() => {
@@ -106,7 +107,7 @@ export default function Home() {
 
           <div className="border-b-2 border-gray-500"></div>
 
-          <div className="flex gap-2 cursor-pointer justify-center py-12">
+          <div className="flex gap-2 cursor-pointer justify-center py-12 flex-wrap">
             {baseItems.map((item: Item) => (
               <Item
                 key={item.id}
