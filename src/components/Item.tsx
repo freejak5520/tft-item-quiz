@@ -20,7 +20,7 @@ const Item = ({ item, onClick, active = false, size = 75 }: Props) => {
       )}
       {item ? (
         <Image
-          src={`/img/items/${item.image}`}
+          src={`/img/items/${item.image}.webp`}
           alt={item.name}
           width={size}
           height={size}

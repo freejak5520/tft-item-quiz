@@ -3,316 +3,316 @@
     {
       "id": 1,
       "name": "B.F. 대검",
-      "image": "TFT_Item_BFSword.png"
+      "image": "TFT_Item_BFSword"
     },
     {
       "id": 2,
       "name": "곡궁",
-      "image": "TFT_Item_RecurveBow.png"
+      "image": "TFT_Item_RecurveBow"
     },
     {
       "id": 3,
       "name": "쇠사슬 조끼",
-      "image": "TFT_Item_ChainVest.png"
+      "image": "TFT_Item_ChainVest"
     },
     {
       "id": 4,
       "name": "음전자 망토",
-      "image": "TFT_Item_NegatronCloak.png"
+      "image": "TFT_Item_NegatronCloak"
     },
     {
       "id": 5,
       "name": "쓸데없이 큰 지팡이",
-      "image": "TFT_Item_NeedlesslyLargeRod.png"
+      "image": "TFT_Item_NeedlesslyLargeRod"
     },
     {
       "id": 6,
       "name": "여신의 눈물",
-      "image": "TFT_Item_TearOfTheGoddess.png"
+      "image": "TFT_Item_TearOfTheGoddess"
     },
     {
       "id": 7,
       "name": "거인의 허리띠",
-      "image": "TFT_Item_GiantsBelt.png"
+      "image": "TFT_Item_GiantsBelt"
     },
     {
       "id": 8,
       "name": "연습용 장갑",
-      "image": "TFT_Item_SparringGloves.png"
+      "image": "TFT_Item_SparringGloves"
     },
     {
       "id": 9,
       "name": "뒤집개",
-      "image": "TFT_Item_Spatula.png"
+      "image": "TFT_Item_Spatula"
     },
     {
       "id": 11,
       "name": "죽음의 검",
-      "image": "TFT_Item_Deathblade.png",
+      "image": "TFT_Item_Deathblade",
       "baseItems": [1, 1]
     },
     {
       "id": 12,
       "name": "거인 학살자",
-      "image": "TFT_Item_MadredsBloodrazor.png",
+      "image": "TFT_Item_MadredsBloodrazor",
       "baseItems": [1, 2]
     },
     {
       "id": 13,
       "name": "밤의 끝자락",
-      "image": "TFT_Item_GuardianAngel.png",
+      "image": "TFT_Item_GuardianAngel",
       "baseItems": [1, 3]
     },
     {
       "id": 14,
       "name": "피바라기",
-      "image": "TFT_Item_Bloodthirster.png",
+      "image": "TFT_Item_Bloodthirster",
       "baseItems": [1, 4]
     },
     {
       "id": 15,
       "name": "마법공학 총검",
-      "image": "TFT_Item_HextechGunblade.png",
+      "image": "TFT_Item_HextechGunblade",
       "baseItems": [1, 5]
     },
     {
       "id": 16,
       "name": "쇼진의 창",
-      "image": "TFT_Item_SpearOfShojin.png",
+      "image": "TFT_Item_SpearOfShojin",
       "baseItems": [1, 6]
     },
     {
       "id": 17,
       "name": "스테락의 도전",
-      "image": "TFT_Item_SteraksGage.png",
+      "image": "TFT_Item_SteraksGage",
       "baseItems": [1, 7]
     },
     {
       "id": 18,
       "name": "무한의 대검",
-      "image": "TFT_Item_InfinityEdge.png",
+      "image": "TFT_Item_InfinityEdge",
       "baseItems": [1, 8]
     },
     {
       "id": 19,
       "name": "True Damage 상징",
-      "image": "TFT10_Item_TrueDamageEmblem.png",
+      "image": "TFT10_Item_TrueDamageEmblem",
       "baseItems": [1, 9]
     },
     {
       "id": 22,
       "name": "붉은 덩굴정령",
-      "image": "TFT_Item_RapidFireCannon.png",
+      "image": "TFT_Item_RapidFireCannon",
       "baseItems": [2, 2]
     },
     {
       "id": 23,
       "name": "거인의 결의",
-      "image": "TFT_Item_TitansResolve.png",
+      "image": "TFT_Item_TitansResolve",
       "baseItems": [2, 3]
     },
     {
       "id": 24,
       "name": "루난의 허리케인",
-      "image": "TFT_Item_RunaansHurricane.png",
+      "image": "TFT_Item_RunaansHurricane",
       "baseItems": [2, 4]
     },
     {
       "id": 25,
       "name": "구인수의 격노검",
-      "image": "TFT_Item_GuinsoosRageblade.png",
+      "image": "TFT_Item_GuinsoosRageblade",
       "baseItems": [2, 5]
     },
     {
       "id": 26,
       "name": "스태틱의 단검",
-      "image": "TFT_Item_StatikkShiv.png",
+      "image": "TFT_Item_StatikkShiv",
       "baseItems": [2, 6]
     },
     {
       "id": 27,
       "name": "내셔의 이빨",
-      "image": "TFT_Item_Leviathan.png",
+      "image": "TFT_Item_Leviathan",
       "baseItems": [2, 7]
     },
     {
       "id": 28,
       "name": "최후의 속삭임",
-      "image": "TFT_Item_LastWhisper.png",
+      "image": "TFT_Item_LastWhisper",
       "baseItems": [2, 8]
     },
     {
       "id": 29,
       "name": "8비트 상징",
-      "image": "TFT10_Item_8bitEmblem.png",
+      "image": "TFT10_Item_8bitEmblem",
       "baseItems": [2, 9]
     },
     {
       "id": 33,
       "name": "덤불 조끼",
-      "image": "TFT_Item_BrambleVest.png",
+      "image": "TFT_Item_BrambleVest",
       "baseItems": [3, 3]
     },
     {
       "id": 34,
       "name": "가고일 돌갑옷",
-      "image": "TFT_Item_GargoyleStoneplate.png",
+      "image": "TFT_Item_GargoyleStoneplate",
       "baseItems": [3, 4]
     },
     {
       "id": 35,
       "name": "크라운가드",
-      "image": "TFT_Item_Crownguard.png",
+      "image": "TFT_Item_Crownguard",
       "baseItems": [3, 5]
     },
     {
       "id": 36,
       "name": "수호자의 맹세",
-      "image": "TFT_Item_FrozenHeart.png",
+      "image": "TFT_Item_FrozenHeart",
       "baseItems": [3, 6]
     },
     {
       "id": 37,
       "name": "태양불꽃 망토",
-      "image": "TFT_Item_RedBuff.png",
+      "image": "TFT_Item_RedBuff",
       "baseItems": [3, 7]
     },
     {
       "id": 38,
       "name": "굳건한 심장",
-      "image": "TFT_Item_NightHarvester.png",
+      "image": "TFT_Item_NightHarvester",
       "baseItems": [3, 8]
     },
     {
       "id": 39,
       "name": "펜타킬 상징",
-      "image": "TFT10_Item_PentakillEmblem.png",
+      "image": "TFT10_Item_PentakillEmblem",
       "baseItems": [3, 9]
     },
     {
       "id": 44,
       "name": "용의 발톱",
-      "image": "TFT_Item_DragonsClaw.png",
+      "image": "TFT_Item_DragonsClaw",
       "baseItems": [4, 4]
     },
     {
       "id": 45,
       "name": "이온 충격기",
-      "image": "TFT_Item_IonicSpark.png",
+      "image": "TFT_Item_IonicSpark",
       "baseItems": [4, 5]
     },
     {
       "id": 46,
       "name": "적응형 투구",
-      "image": "TFT_Item_AdaptiveHelm.png",
+      "image": "TFT_Item_AdaptiveHelm",
       "baseItems": [4, 6]
     },
     {
       "id": 47,
       "name": "저녁갑주",
-      "image": "TFT_Item_SpectralGauntlet.png",
+      "image": "TFT_Item_SpectralGauntlet",
       "baseItems": [4, 7]
     },
     {
       "id": 48,
       "name": "수은",
-      "image": "TFT_Item_Quicksilver.png",
+      "image": "TFT_Item_Quicksilver",
       "baseItems": [4, 8]
     },
     {
       "id": 49,
       "name": "재즈 상징",
-      "image": "TFT10_Item_JazzEmblem.png",
+      "image": "TFT10_Item_JazzEmblem",
       "baseItems": [4, 9]
     },
     {
       "id": 55,
       "name": "라바돈의 죽음모자",
-      "image": "TFT_Item_RabadonsDeathcap.png",
+      "image": "TFT_Item_RabadonsDeathcap",
       "baseItems": [5, 5]
     },
     {
       "id": 56,
       "name": "대천사의 지팡이",
-      "image": "TFT_Item_ArchangelsStaff.png",
+      "image": "TFT_Item_ArchangelsStaff",
       "baseItems": [5, 6]
     },
     {
       "id": 57,
       "name": "모렐로노미콘",
-      "image": "TFT_Item_Morellonomicon.png",
+      "image": "TFT_Item_Morellonomicon",
       "baseItems": [5, 7]
     },
     {
       "id": 58,
       "name": "보석 건틀릿",
-      "image": "TFT_Item_JeweledGauntlet.png",
+      "image": "TFT_Item_JeweledGauntlet",
       "baseItems": [5, 8]
     },
     {
       "id": 59,
       "name": "K/DA 상징",
-      "image": "TFT10_Item_KDAEmblem.png",
+      "image": "TFT10_Item_KDAEmblem",
       "baseItems": [5, 9]
     },
     {
       "id": 66,
       "name": "푸른 파수꾼",
-      "image": "TFT_Item_BlueBuff.png",
+      "image": "TFT_Item_BlueBuff",
       "baseItems": [6, 6]
     },
     {
       "id": 67,
       "name": "구원",
-      "image": "TFT_Item_Redemption.png",
+      "image": "TFT_Item_Redemption",
       "baseItems": [6, 7]
     },
     {
       "id": 68,
       "name": "정의의 손길",
-      "image": "TFT_Item_UnstableConcoction.png",
+      "image": "TFT_Item_UnstableConcoction",
       "baseItems": [6, 8]
     },
     {
       "id": 69,
       "name": "이모코어 상징",
-      "image": "TFT10_Item_EmoEmblem.png",
+      "image": "TFT10_Item_EmoEmblem",
       "baseItems": [6, 9]
     },
     {
       "id": 77,
       "name": "워모그의 갑옷",
-      "image": "TFT_Item_WarmogsArmor.png",
+      "image": "TFT_Item_WarmogsArmor",
       "baseItems": [7, 7]
     },
     {
       "id": 78,
       "name": "방패파괴자",
-      "image": "TFT_Item_PowerGauntlet.png",
+      "image": "TFT_Item_PowerGauntlet",
       "baseItems": [7, 8]
     },
     {
       "id": 79,
       "name": "Heartsteel 상징",
-      "image": "TFT10_Item_PBJEmblem.png",
+      "image": "TFT10_Item_PBJEmblem",
       "baseItems": [7, 9]
     },
     {
       "id": 88,
       "name": "도적의 장갑",
-      "image": "TFT_Item_ThiefsGloves.png",
+      "image": "TFT_Item_ThiefsGloves",
       "baseItems": [8, 8]
     },
     {
       "id": 89,
       "name": "펑크 상징",
-      "image": "TFT10_Item_PunkEmblem.png",
+      "image": "TFT10_Item_PunkEmblem",
       "baseItems": [8, 9]
     },
     {
       "id": 99,
       "name": "전략가의 왕관",
-      "image": "TFT_Item_ForceOfNature.png",
+      "image": "TFT_Item_ForceOfNature",
       "baseItems": [9, 9]
     }
   ]
