@@ -1,17 +1,18 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
-import useItems from "@/hooks/useItems";
-import Item from "@/components/Item";
 import AnswerAlert from "@/components/AnswerAlert";
-import Operator from "@/components/Operator";
-import Title from "@/components/Title";
 import BaseItems from "@/components/BaseItems";
+import Item from "@/components/Item";
+import Operator from "@/components/Operator";
 import Separator from "@/components/Separator";
+import Title from "@/components/Title";
+import useItems from "@/hooks/useItems";
+import { useCallback, useEffect, useState } from "react";
 
 export default function Home() {
   const { baseItems, getRandomBuildItem, getItemById } = useItems();
-  const [quizItem, setQuizItem] = useState<Item | null>(null);
+
+  const [quizItem, setQuizItem] = useState<Item | undefined>();
   const [selectItems, setSelectItems] = useState<Item[]>([]);
   const [disabled, setDisabled] = useState(false);
   const [alertVisible, setAlertVisible] = useState(false);
@@ -31,12 +32,9 @@ export default function Home() {
     const sorted = [...selectItems].sort((a, b) => {
       return a.id - b.id;
     });
-    const itemId = Number(`${sorted[0].id}${sorted[1].id}`);
-    console.log(sorted, itemId);
 
-    const selectItem = getItemById(itemId);
+    const selectItem = getItemById(Number(`${sorted[0].id}${sorted[1].id}`));
 
-    console.log(itemId, selectItem, quizItem);
     return selectItem?.id === quizItem?.id;
   }, [getItemById, quizItem, selectItems]);
 
@@ -49,18 +47,20 @@ export default function Home() {
 
     setDisabled(true);
 
+    setAlertText(checkResult() ? "정답입니다." : "오답입니다.");
+    setAnswer(quizItem?.baseItems ?? []);
+    setAlertVisible(true);
+
     setTimeout(() => {
-      setAlertText(checkResult() ? "정답입니다." : "오답입니다.");
-      setAnswer(quizItem?.baseItems ?? []);
-      setAlertVisible(true);
+      setAlertVisible(false);
+      setSelectItems([]);
+      setQuizItem(undefined);
 
       setTimeout(() => {
-        setAlertVisible(false);
-        setSelectItems([]);
         startQuiz();
         setDisabled(false);
-      }, 1000);
-    }, 1);
+      }, 1);
+    }, 1000);
   }, [checkResult, quizItem, selectItems, startQuiz]);
 
   useEffect(() => {
@@ -113,7 +113,7 @@ export default function Home() {
             <Item size={70} />
           )}
           <Operator>=</Operator>
-          {quizItem && <Item item={quizItem} size={70} />}
+          <Item item={quizItem} size={70} />
         </div>
 
         <Separator />
