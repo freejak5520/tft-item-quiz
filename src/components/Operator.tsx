@@ -1,5 +1,5 @@
 const Operator = ({ children }: { children?: React.ReactNode }) => (
-  <div className="p-4 text-xl text-gray-950 dark:text-gray-50">{children}</div>
+  <div className="text-font-950 dark:text-font-50 p-4 text-xl">{children}</div>
 );
 
 export default Operator;

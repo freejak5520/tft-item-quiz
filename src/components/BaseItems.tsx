@@ -8,24 +8,18 @@ type Props = {
 
 const BaseItems = ({ items, onClick }: Props) => {
   return (
-    <Suspense
-      fallback={
-        <div>hellohellohellohellohellohellohellohellohellohellohellohello</div>
-      }
-    >
-      <div className="flex cursor-pointer flex-wrap justify-center gap-2 py-12">
-        {items.map((item: Item) => (
-          <Item
-            key={item.id}
-            onClick={() => {
-              onClick && onClick(item);
-            }}
-            item={item}
-            size={70}
-          />
-        ))}
-      </div>
-    </Suspense>
+    <div className="flex cursor-pointer flex-wrap justify-center gap-2 py-12">
+      {items.map((item: Item) => (
+        <Item
+          key={item.id}
+          onClick={() => {
+            onClick && onClick(item);
+          }}
+          item={item}
+          size={70}
+        />
+      ))}
+    </div>
   );
 };
 
