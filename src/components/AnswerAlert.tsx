@@ -1,3 +1,4 @@
+import React from "react";
 import Item from "./Item";
 
 type Props = {
@@ -7,9 +8,9 @@ type Props = {
 
 const AnswerAlert = ({ text, answer }: Props) => {
   return (
-    <div className="bg-bg-950 fixed left-0 top-0 z-50 flex h-screen min-h-full w-full flex-col items-center justify-center bg-opacity-50">
-      <div className="bg-bg-200 dark:bg-bg-800 rounded bg-opacity-95 px-16 py-8 text-center shadow">
-        <div className="text-font-900 dark:text-font-100 mb-8 text-xl font-bold">
+    <div className="fixed left-0 top-0 z-50 flex h-screen min-h-full w-full flex-col items-center justify-center bg-bg-950 bg-opacity-50">
+      <div className="rounded bg-bg-200 bg-opacity-95 px-16 py-8 text-center shadow dark:bg-bg-800">
+        <div className="mb-8 text-xl font-bold text-font-900 dark:text-font-100">
           {text}
         </div>
         <div className="flex gap-4">

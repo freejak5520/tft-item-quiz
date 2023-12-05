@@ -17,4 +17,5 @@ module.exports = {
   vueIndentScriptAndStyle: false,
   endOfLine: "lf",
   plugins: ["prettier-plugin-tailwindcss"],
+  tailwindFunctions: ['clsx', 'cva'],
 };
