@@ -1,8 +1,16 @@
+import { Noto_Sans_KR } from "next/font/google";
+import React from "react";
+
+import { clsx } from "clsx";
+
 import Footer from "./_components/Footer";
 import "./globals.css";
-import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const notoSansKr = Noto_Sans_KR({
+  subsets: ["latin"],
+  weight: ["100", "400", "700", "900"],
+  variable: "--noto-sans-kr",
+});
 
 export const metadata = {
   title: "아이템 조합 퀴즈",
@@ -15,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className="bg-bg-100 dark:bg-bg-900">
+    <html lang="ko">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
@@ -92,7 +100,7 @@ export default function RootLayout({
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
       </head>
-      <body className={inter.className}>
+      <body className={clsx(notoSansKr.className, "bg-bg-100 dark:bg-bg-900")}>
         {/* <Gnb /> */}
         {children}
         <Footer />

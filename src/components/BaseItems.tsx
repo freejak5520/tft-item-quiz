@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import Item from "./Item";
 
 type Props = {
