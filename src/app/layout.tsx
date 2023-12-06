@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/react";
+
 import { Noto_Sans_KR } from "next/font/google";
 import React from "react";
 
@@ -104,6 +106,7 @@ export default function RootLayout({
         {/* <Gnb /> */}
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
