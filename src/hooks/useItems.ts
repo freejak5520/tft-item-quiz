@@ -5,7 +5,10 @@ const fetchData = async () => {
     next: { revalidate: 3600 },
   });
   const responseData = await response.json();
-  return responseData as Item[];
+
+  return JSON.parse(
+    Buffer.from(responseData.data, "base64").toString("utf8")
+  ) as Item[];
 };
 
 const useItems = () => {
