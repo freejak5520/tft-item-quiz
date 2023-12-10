@@ -1,7 +1,9 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 
 const fetchData = async () => {
-  const response = await fetch("/api/items");
+  const response = await fetch("/api/items", {
+    next: { revalidate: 3600 },
+  });
   const responseData = await response.json();
   return responseData as Item[];
 };
