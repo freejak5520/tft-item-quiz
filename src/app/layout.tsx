@@ -15,8 +15,8 @@ const notoSansKr = Noto_Sans_KR({
 });
 
 export const metadata = {
-  title: "아이템 조합 퀴즈",
-  description: "전략적 팀 전투 - 아이템 조합 퀴즈",
+  title: "롤체 - 아이템 조합 퀴즈",
+  description: "롤체, 롤토체스, 전략적 팀 전투, 아이템 조합 퀴즈",
 };
 
 export default function RootLayout({
