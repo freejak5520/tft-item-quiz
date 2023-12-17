@@ -7,7 +7,6 @@ import BaseItems from "@/components/BaseItems";
 import Item from "@/components/Item";
 import Operator from "@/components/Operator";
 import Separator from "@/components/Separator";
-import H1 from "@/components/typo/heading/H1";
 import useItemQuiz from "@/hooks/useItemQuiz";
 import Container from "../_components/Container";
 
@@ -56,8 +55,6 @@ const ItemQuiz = () => {
         />
       )}
       <Container>
-        <H1>아이템 조합 퀴즈</H1>
-
         <div className="flex h-fit items-center justify-center py-12">
           {selectItems[0] ? (
             <Item
