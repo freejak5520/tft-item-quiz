@@ -1,48 +1,28 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-import AnswerAlert from "@/components/AnswerAlert";
+import AnswerAlert from "@/components/modal/AnswerAlert";
 import BaseItems from "@/components/BaseItems";
 import Item from "@/components/Item";
 import Operator from "@/components/Operator";
 import Separator from "@/components/Separator";
 import H1 from "@/components/typo/heading/H1";
-import useItems from "@/hooks/useItems";
-
+import useItemQuiz from "@/hooks/useItemQuiz";
 import Container from "../_components/Container";
 
 const ItemQuiz = () => {
-  const { baseItems, getRandomBuildItem, getItemById } = useItems();
+  const { qItem, checkAnswer, baseItems, getItemById, goNextRound } =
+    useItemQuiz();
 
-  const [quizItem, setQuizItem] = useState<Item | undefined>();
   const [selectItems, setSelectItems] = useState<Item[]>([]);
   const [disabled, setDisabled] = useState(false);
   const [alertVisible, setAlertVisible] = useState(false);
   const [alertText, setAlertText] = useState("");
   const [answer, setAnswer] = useState<number[]>([]);
 
-  const startQuiz = useCallback(() => {
-    setQuizItem(getRandomBuildItem());
-  }, [getRandomBuildItem]);
-
-  const checkResult = useCallback(() => {
-    if (selectItems.length < 2) {
-      console.error("정답 확인 불가능");
-      return;
-    }
-
-    const sorted = [...selectItems].sort((a, b) => {
-      return a.id - b.id;
-    });
-
-    const selectItem = getItemById(Number(`${sorted[0].id}${sorted[1].id}`));
-
-    return selectItem?.id === quizItem?.id;
-  }, [getItemById, quizItem, selectItems]);
-
   useEffect(() => {
-    if (!checkResult || !startQuiz) return;
+    if (!checkAnswer) return;
 
     if (selectItems.length < 2) {
       return;
@@ -50,27 +30,22 @@ const ItemQuiz = () => {
 
     setDisabled(true);
 
-    setAlertText(checkResult() ? "정답입니다." : "오답입니다.");
-    setAnswer(quizItem?.baseItems ?? []);
+    const correct = checkAnswer(selectItems[0], selectItems[1]);
+
+    setAlertText(correct ? "정답입니다." : "오답입니다.");
+    setAnswer(qItem?.baseItems ?? []);
     setAlertVisible(true);
 
     setTimeout(() => {
       setAlertVisible(false);
       setSelectItems([]);
-      setQuizItem(undefined);
 
       setTimeout(() => {
-        startQuiz();
         setDisabled(false);
+        goNextRound();
       }, 1);
     }, 1000);
-  }, [checkResult, quizItem, selectItems, startQuiz]);
-
-  useEffect(() => {
-    if (!startQuiz) return;
-
-    startQuiz();
-  }, [startQuiz]);
+  }, [checkAnswer, goNextRound, qItem, selectItems]);
 
   return (
     <>
@@ -116,7 +91,7 @@ const ItemQuiz = () => {
             <Item size={70} />
           )}
           <Operator>=</Operator>
-          <Item item={quizItem} size={70} />
+          <Item item={qItem} size={70} />
         </div>
 
         <Separator />
