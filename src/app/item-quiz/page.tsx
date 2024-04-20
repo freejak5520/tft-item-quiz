@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 
-import AnswerAlert from "@/components/modal/AnswerAlert";
 import BaseItems from "@/components/BaseItems";
 import Item from "@/components/Item";
+import AnswerAlert from "@/components/modal/AnswerAlert";
 import Operator from "@/components/Operator";
 import Separator from "@/components/Separator";
 import useItemQuiz from "@/hooks/useItemQuiz";
@@ -17,7 +17,7 @@ const ItemQuiz = () => {
   const [selectItems, setSelectItems] = useState<Item[]>([]);
   const [disabled, setDisabled] = useState(false);
   const [alertVisible, setAlertVisible] = useState(false);
-  const [alertText, setAlertText] = useState("");
+  const [alertText, setAlertText] = useState<React.ReactNode>("");
   const [answer, setAnswer] = useState<number[]>([]);
 
   useEffect(() => {
@@ -31,7 +31,13 @@ const ItemQuiz = () => {
 
     const correct = checkAnswer(selectItems[0], selectItems[1]);
 
-    setAlertText(correct ? "Correct!" : "Incorrect!");
+    setAlertText(
+      correct ? (
+        <div className="text-5xl font-bold text-green-600">O</div>
+      ) : (
+        <div className="text-5xl font-bold text-red-500">X</div>
+      )
+    );
     setAnswer(qItem?.baseItems ?? []);
     setAlertVisible(true);
 
