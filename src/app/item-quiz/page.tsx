@@ -31,7 +31,7 @@ const ItemQuiz = () => {
 
     const correct = checkAnswer(selectItems[0], selectItems[1]);
 
-    setAlertText(correct ? "정답입니다." : "오답입니다.");
+    setAlertText(correct ? "Correct!" : "Incorrect!");
     setAnswer(qItem?.baseItems ?? []);
     setAlertVisible(true);
 

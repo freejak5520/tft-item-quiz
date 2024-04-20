@@ -14,8 +14,15 @@ const notoSansKr = Noto_Sans_KR({
 });
 
 export const metadata = {
-  title: "롤체 - 아이템 조합 퀴즈",
-  description: "롤체, 롤토체스, 전략적 팀 전투, 아이템 조합 퀴즈",
+  title: "TFT - Item Combination Quiz",
+  description:
+    "TFT, Teamfight Tactics, Strategic Team Battles, Item Combination Quiz",
+  keywords: [
+    "TFT",
+    "Teamfight Tactics",
+    "Strategic Team Battles",
+    "Item Combination Quiz",
+  ],
 };
 
 export default function RootLayout({
@@ -24,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className="dark" style={{ colorScheme: "dark" }}>
+    <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
