@@ -49,10 +49,9 @@ const ItemQuiz = () => {
   return (
     <>
       {alertVisible && (
-        <AnswerAlert
-          text={alertText}
-          answer={answer.map((id) => getItemById(id)) as Item[]}
-        />
+        <AnswerAlert answer={answer.map((id) => getItemById(id)) as Item[]}>
+          {alertText}
+        </AnswerAlert>
       )}
       <Container>
         <div className="flex h-fit items-center justify-center py-12">
