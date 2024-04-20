@@ -1,11 +1,10 @@
-import { Analytics } from "@vercel/analytics/react";
 import { clsx } from "clsx";
 import { Noto_Sans_KR } from "next/font/google";
 import React from "react";
 import Footer from "./_components/Footer";
+import Gnb from "./_components/Gnb";
 import Providers from "./_providers/Providers";
 import "./globals.css";
-import Gnb from "./_components/Gnb";
 
 const notoSansKr = Noto_Sans_KR({
   subsets: ["latin"],
@@ -110,10 +109,11 @@ export default function RootLayout({
       </head>
       <body className={clsx(notoSansKr.className, "bg-bg-100 dark:bg-bg-900")}>
         <Providers>
-          <Gnb />
-          {children}
-          <Footer />
-          <Analytics />
+          <div className="flex min-h-screen flex-col">
+            <Gnb />
+            <div className="flex-1">{children}</div>
+            <Footer />
+          </div>
         </Providers>
       </body>
     </html>
