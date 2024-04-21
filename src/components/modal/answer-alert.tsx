@@ -1,5 +1,4 @@
-import React from "react";
-import Item from "../Item";
+import Item from "@/components/item";
 
 type Props = {
   children: React.ReactNode;
