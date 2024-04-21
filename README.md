@@ -25,6 +25,12 @@ npm run dev
 yarn dev
 ```
 
+## Chromatic
+
+Storybook 배포 및 UI Test를 위해 Chromatic을 사용합니다.
+
+https://www.chromatic.com/library?appId=6625032ef29074c7f46750c5
+
 ## To Do
 
 - [x] 시즌 11 대응
