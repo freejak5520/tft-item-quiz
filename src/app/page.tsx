@@ -5,7 +5,7 @@ import BaseItems from "@/components/base-items";
 import Container from "@/components/container";
 import Item from "@/components/item";
 import AnswerAlert from "@/components/modal/answer-alert";
-import Operator from "@/components/operator";
+import Operator from "@/components/oper";
 import Separator from "@/components/separator";
 import useItemQuiz from "@/hooks/useItemQuiz";
 
