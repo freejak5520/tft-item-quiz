@@ -17,9 +17,9 @@ const Button = ({
   ...props
 }: Props) => {
   const variants = {
-    primary: "bg-blue-500 hover:bg-blue-600 text-white",
-    default: "bg-gray-500 hover:bg-gray-600 text-white",
-    danger: "bg-red-500 hover:bg-red-600 text-white",
+    primary: "bg-blue-600 hover:bg-blue-700 text-white",
+    default: "bg-gray-600 hover:bg-gray-700 text-white",
+    danger: "bg-red-600 hover:bg-red-700 text-white",
   } as { [key: string]: string };
 
   const sizeVariants = {
