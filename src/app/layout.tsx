@@ -20,11 +20,7 @@ export const metadata = {
   keywords: SITE_KEYWORDS,
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
       <RootHead />
@@ -39,4 +35,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
