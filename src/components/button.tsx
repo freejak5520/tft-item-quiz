@@ -11,6 +11,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button = ({
   children,
+  className,
   variant = "primary",
   size = "md",
   ...props
@@ -35,7 +36,7 @@ const Button = ({
         "rounded",
         variant && variants[variant],
         size && sizeVariants[size],
-        props.className
+        className
       )}
     >
       {children}

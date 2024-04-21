@@ -1,6 +1,5 @@
 "use client";
 
-import Container from "@/components/container";
 import Item from "@/components/item";
 import BaseItems from "@/components/item/base-items";
 import AnswerAlert from "@/components/modal/answer-alert";
@@ -55,56 +54,54 @@ const ItemQuiz = () => {
           />
         </div>
       )}
-      <Container>
-        <div className="flex h-fit items-center justify-center py-12">
-          {selectItems[0] ? (
-            <Item
-              onClick={() => {
-                if (disabled) return;
+      <div className="flex h-fit items-center justify-center py-12">
+        {selectItems[0] ? (
+          <Item
+            onClick={() => {
+              if (disabled) return;
 
-                setSelectItems((prev) => {
-                  return prev.filter((value) => value.id != selectItems[0].id);
-                });
-              }}
-              item={selectItems[0]}
-              size={70}
-            />
-          ) : (
-            <Item size={70} />
-          )}
-          <Operator>+</Operator>
-          {selectItems[1] ? (
-            <Item
-              onClick={() => {
-                if (disabled) return;
+              setSelectItems((prev) => {
+                return prev.filter((value) => value.id != selectItems[0].id);
+              });
+            }}
+            item={selectItems[0]}
+            size={70}
+          />
+        ) : (
+          <Item size={70} />
+        )}
+        <Operator>+</Operator>
+        {selectItems[1] ? (
+          <Item
+            onClick={() => {
+              if (disabled) return;
 
-                setSelectItems((prev) => {
-                  return prev.filter((value) => value.id != selectItems[1].id);
-                });
-              }}
-              item={selectItems[1]}
-              size={70}
-            />
-          ) : (
-            <Item size={70} />
-          )}
-          <Operator>=</Operator>
-          <Item item={qItem} size={70} />
-        </div>
+              setSelectItems((prev) => {
+                return prev.filter((value) => value.id != selectItems[1].id);
+              });
+            }}
+            item={selectItems[1]}
+            size={70}
+          />
+        ) : (
+          <Item size={70} />
+        )}
+        <Operator>=</Operator>
+        <Item item={qItem} size={70} />
+      </div>
 
-        <Separator />
+      <Separator />
 
-        <BaseItems
-          items={baseItems}
-          onClick={(item) => {
-            if (disabled) return;
+      <BaseItems
+        items={baseItems}
+        onClick={(item) => {
+          if (disabled) return;
 
-            setSelectItems((prev) => {
-              return [...prev, item];
-            });
-          }}
-        />
-      </Container>
+          setSelectItems((prev) => {
+            return [...prev, item];
+          });
+        }}
+      />
     </>
   );
 };

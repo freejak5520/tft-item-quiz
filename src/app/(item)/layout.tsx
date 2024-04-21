@@ -1,4 +1,4 @@
-const Container = ({ children }: { children?: React.ReactNode }) => {
+const Layout = ({ children }: { children?: React.ReactNode }) => {
   return (
     <div className="mx-auto flex min-h-[70vh] max-w-7xl flex-col">
       <div className="p-16">{children}</div>
@@ -6,4 +6,4 @@ const Container = ({ children }: { children?: React.ReactNode }) => {
   );
 };
 
-export default Container;
+export default Layout;

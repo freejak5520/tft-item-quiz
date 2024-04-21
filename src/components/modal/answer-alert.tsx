@@ -5,7 +5,7 @@ type Props = {
   items: Item[];
 };
 
-const AnswerAlert = ({ correct, items }: Props) => {
+const AnswerAlert = ({ correct = true, items = [] }: Props) => {
   return (
     <div className="rounded bg-bg-200 bg-opacity-95 px-16 py-8 text-center shadow dark:bg-bg-800">
       <div className="mb-8 text-xl font-bold text-font-900 dark:text-font-100">

@@ -20,6 +20,11 @@ const meta = {
       </div>
     ),
   ],
+  argTypes: {
+    correct: {
+      control: "boolean",
+    },
+  },
 } satisfies Meta;
 
 export default meta;
