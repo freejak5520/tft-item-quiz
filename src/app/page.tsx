@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import BaseItems from "@/components/item/base-items";
-import Container from "@/components/containe";
+import Container from "@/components/container";
 import Item from "@/components/item";
+import BaseItems from "@/components/item/base-items";
 import AnswerAlert from "@/components/modal/answer-alert";
-import Operator from "@/components/oper";
-import Separator from "@/components/sepa";
+import Operator from "@/components/operator";
+import Separator from "@/components/separator";
 import useItemQuiz from "@/hooks/useItemQuiz";
+import { useEffect, useState } from "react";
 
 const ItemQuiz = () => {
   const { qItem, checkAnswer, baseItems, getItemById, goNextRound } =
