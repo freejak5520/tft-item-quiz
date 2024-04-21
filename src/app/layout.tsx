@@ -1,15 +1,11 @@
+import Footer from "@/components/footer";
+import Gnb from "@/components/gnb";
 import RootHead from "@/components/head";
+import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_TITLE } from "@/lib/constants";
 import { clsx } from "clsx";
 import { Noto_Sans_KR } from "next/font/google";
 import React from "react";
-import {
-  SITE_DESCRIPTION,
-  SITE_KEYWORDS,
-  SITE_TITLE,
-} from "../../lib/constants";
-import Footer from "./_components/Footer";
-import Gnb from "./_components/Gnb";
-import Providers from "./_providers/Providers";
+import Providers from "../providers/Providers";
 import "./globals.css";
 
 const notoSansKr = Noto_Sans_KR({
@@ -24,11 +20,7 @@ export const metadata = {
   keywords: SITE_KEYWORDS,
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
       <RootHead />
@@ -43,4 +35,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

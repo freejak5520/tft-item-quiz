@@ -1,5 +1,7 @@
-import { redirect } from "next/navigation";
+import ItemQuiz from "@/components/item-quiz";
 
-export default function Home() {
-  redirect("/item-quiz");
-}
+const HomePage = () => {
+  return <ItemQuiz />;
+};
+
+export default HomePage;
