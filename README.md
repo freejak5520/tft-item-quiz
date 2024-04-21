@@ -2,9 +2,9 @@
 
 전략적 팀 전투(롤체, tft, Teamfight Tactics)의 아이템 조합을 학습할 수 있는 서비스 입니다.
 
-시즌 10 아이템 조합을 학습할 수 있습니다.
+시즌 11 아이템 조합을 학습할 수 있습니다.
 
-링크: [https://www.tft.monster/item-quiz](https://www.tft.monster/item-quiz)
+링크: [https://item.tft.monster/](https://item.tft.monster/)
 
 ## 시작하기
 
@@ -12,7 +12,7 @@
 
 ```bash
 # Clone project
-git clone https://github.com/smoothsquid/tft-item-quiz.git
+git clone https://github.com/freejak5520/tft-item-quiz.git
 
 # Install dependencies
 npm install
@@ -25,8 +25,8 @@ npm run dev
 yarn dev
 ```
 
-## TODO
+## To Do
 
-- [ ] 시즌 11 대응
+- [x] 시즌 11 대응
 - [ ] 퀴즈 시작, 종료, 결과 보기
 - [ ] 결과 공유
