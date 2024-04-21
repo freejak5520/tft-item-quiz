@@ -1,30 +1,44 @@
+import { clsx } from "clsx";
 import { ButtonHTMLAttributes } from "react";
 
-type Size = "sm" | "md" | "lg";
-type Variant = "primary" | "default" | "error" | "danger";
+type Size = "sm" | "md" | "lg" | "block";
+type Variant = "primary" | "default" | "danger";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: Size;
   variant?: Variant;
 }
 
-const Button = (props: Props) => {
+const Button = ({
+  children,
+  variant = "primary",
+  size = "md",
+  ...props
+}: Props) => {
   const variants = {
-    primary: "bg-blue-500",
+    primary: "bg-blue-500 hover:bg-blue-600 text-white",
+    default: "bg-gray-500 hover:bg-gray-600 text-white",
+    danger: "bg-red-500 hover:bg-red-600 text-white",
   } as { [key: string]: string };
 
-  const size = {
+  const sizeVariants = {
+    sm: "px-1 py-0.5",
     md: "px-3 py-1.5",
+    lg: "px-4 py-2",
+    block: "py-1.5 w-full",
   } as { [key: string]: string };
 
   return (
     <button
       {...props}
-      className={`rounded ${
-        props.variant && variants[props.variant ?? "default"]
-      } ${props.size && size[props.size || "md"]} ${props.className}`}
+      className={clsx(
+        "rounded",
+        variant && variants[variant],
+        size && sizeVariants[size],
+        props.className
+      )}
     >
-      {props.children}
+      {children}
     </button>
   );
 };

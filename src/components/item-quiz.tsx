@@ -16,7 +16,7 @@ const ItemQuiz = () => {
   const [selectItems, setSelectItems] = useState<Item[]>([]);
   const [disabled, setDisabled] = useState(false);
   const [alertVisible, setAlertVisible] = useState(false);
-  const [alertText, setAlertText] = useState<React.ReactNode>("");
+  const [isCorrect, setIsCorrect] = useState(false);
   const [answer, setAnswer] = useState<number[]>([]);
 
   useEffect(() => {
@@ -30,13 +30,7 @@ const ItemQuiz = () => {
 
     const correct = checkAnswer(selectItems[0], selectItems[1]);
 
-    setAlertText(
-      correct ? (
-        <div className="text-5xl font-bold text-green-600">O</div>
-      ) : (
-        <div className="text-5xl font-bold text-red-500">X</div>
-      )
-    );
+    setIsCorrect(correct);
     setAnswer(qItem?.baseItems ?? []);
     setAlertVisible(true);
 
@@ -54,9 +48,12 @@ const ItemQuiz = () => {
   return (
     <>
       {alertVisible && (
-        <AnswerAlert answer={answer.map((id) => getItemById(id)) as Item[]}>
-          {alertText}
-        </AnswerAlert>
+        <div className="fixed left-0 top-0 z-50 flex h-screen min-h-full w-full flex-col items-center justify-center bg-bg-950 bg-opacity-50">
+          <AnswerAlert
+            correct={isCorrect}
+            items={answer.map((id) => getItemById(id)) as Item[]}
+          />
+        </div>
       )}
       <Container>
         <div className="flex h-fit items-center justify-center py-12">

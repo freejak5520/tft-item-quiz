@@ -42,3 +42,5 @@ next-env.d.ts
 !.yarn/sdks
 !.yarn/versions
 !.yarn/cache
+
+*storybook.log
