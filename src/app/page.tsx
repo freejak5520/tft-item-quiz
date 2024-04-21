@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import BaseItems from "@/components/base-items";
-import Container from "@/components/container";
+import BaseItems from "@/components/item/base-items";
+import Container from "@/components/containe";
 import Item from "@/components/item";
 import AnswerAlert from "@/components/modal/answer-alert";
 import Operator from "@/components/oper";

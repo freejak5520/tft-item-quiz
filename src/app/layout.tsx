@@ -1,12 +1,12 @@
-import RootHead from "@/components/head";
+import RootHead from "@/components/hea";
 import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_TITLE } from "@/lib/constants";
 import { clsx } from "clsx";
 import { Noto_Sans_KR } from "next/font/google";
 import React from "react";
 import Providers from "../providers/Providers";
 import "./globals.css";
-import Gnb from "@/components/gnb";
-import Footer from "@/components/footer";
+import Gnb from "@/components/gn";
+import Footer from "@/components/foote";
 
 const notoSansKr = Noto_Sans_KR({
   subsets: ["latin"],
