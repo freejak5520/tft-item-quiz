@@ -17,6 +17,7 @@ const Gnb = () => {
             onClick={() => {
               setTheme(theme === "dark" ? "light" : "dark");
             }}
+            aria-label="Toggle dark mode"
           >
             {theme === "light" ? <FaSun /> : <FaMoon />}
           </button>
