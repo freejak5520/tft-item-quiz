@@ -105,14 +105,16 @@ const ItemQuiz = () => {
       />
 
       <div className="flex justify-center">
-        The full item combination guide can be found
-        <Link
-          href="https://tft.op.gg/game-guide/items"
-          className="ml-1 font-bold text-blue-800 underline dark:text-blue-300"
-        >
-          here
-        </Link>
-        .
+        <p>
+          The full item combination guide can be found{" "}
+          <Link
+            href="https://tft.op.gg/game-guide/items"
+            className="font-bold text-blue-800 underline dark:text-blue-300"
+          >
+            here
+          </Link>
+          .
+        </p>
       </div>
     </>
   );
