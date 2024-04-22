@@ -109,6 +109,7 @@ const ItemQuiz = () => {
           The full item combination guide can be found{" "}
           <Link
             href="https://tft.op.gg/game-guide/items"
+            target="_blank"
             className="font-bold text-blue-800 underline dark:text-blue-300"
           >
             here
