@@ -6,6 +6,7 @@ import AnswerAlert from "@/components/modal/answer-alert";
 import Operator from "@/components/operator";
 import Separator from "@/components/separator";
 import useItemQuiz from "@/hooks/useItemQuiz";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const ItemQuiz = () => {
@@ -102,6 +103,17 @@ const ItemQuiz = () => {
           });
         }}
       />
+
+      <div className="flex justify-center">
+        The full item combination guide can be found
+        <Link
+          href="https://tft.op.gg/game-guide/items"
+          className="ml-1 font-bold text-blue-800 underline dark:text-blue-300"
+        >
+          here
+        </Link>
+        .
+      </div>
     </>
   );
 };
