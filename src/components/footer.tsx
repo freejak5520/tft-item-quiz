@@ -6,7 +6,7 @@ const Footer = () => {
       Made by <strong>Jake Lee</strong>{" "}
       <Link
         className="font-bold text-blue-800 underline dark:text-blue-300"
-        href="https://github.com/freejak5520"
+        href="https://github.com/freejak5520/tft-item-quiz"
         target="_blank"
         rel="noopener noreferrer"
       >
