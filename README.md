@@ -29,7 +29,10 @@ yarn dev
 
 Storybook 배포 및 UI Test를 위해 Chromatic을 사용합니다.
 
-https://www.chromatic.com/library?appId=6625032ef29074c7f46750c5
+[Chromatic library](https://www.chromatic.com/library?appId=6625032ef29074c7f46750c5&branch=main)
+
+[Storybook](https://main--6625032ef29074c7f46750c5.chromatic.com)
+
 
 ## To Do
 
