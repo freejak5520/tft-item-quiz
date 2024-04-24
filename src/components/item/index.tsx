@@ -10,7 +10,7 @@ type Props = {
 const Item = ({ item, onClick, active = false, size = 75 }: Props) => {
   return (
     <div
-      className={`relative flex flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow ${
+      className={`relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow ${
         onClick && "cursor-pointer"
       }`}
       onClick={onClick}
@@ -20,13 +20,17 @@ const Item = ({ item, onClick, active = false, size = 75 }: Props) => {
       )}
       {item ? (
         <Image
-          src={`/img/items/${item.image}.webp`}
+          src={
+            item.image
+              ? `/img/items/${item.image}.webp`
+              : "/img/items/gray.webp"
+          }
           alt={item.name ?? ""}
           width={size}
           height={size}
         />
       ) : (
-        <Image src={"/img/items/gray.png"} width={size} height={size} alt="" />
+        <Image src={"/img/items/gray.webp"} width={size} height={size} alt="" />
       )}
     </div>
   );

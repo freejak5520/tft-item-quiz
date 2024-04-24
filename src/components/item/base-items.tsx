@@ -7,7 +7,7 @@ type Props = {
 
 const BaseItems = ({ items, onClick }: Props) => {
   const baseItems =
-    items.length > 0
+    items && items.length > 0
       ? items
       : [
           { id: 1, image: "gray" },
