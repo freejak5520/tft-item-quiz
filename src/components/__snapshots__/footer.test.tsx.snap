@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders the footer 1`] = `
+<div>
+  <div
+    class="border-t border-border-300 bg-bg-200 p-8 text-center dark:border-border-700 dark:bg-bg-800"
+  >
+    Made by 
+    <strong>
+      Jake Lee
+    </strong>
+     
+    <a
+      class="font-bold text-blue-800 underline dark:text-blue-300"
+      href="https://github.com/freejak5520/tft-item-quiz"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Github
+    </a>
+  </div>
+</div>
+`;
