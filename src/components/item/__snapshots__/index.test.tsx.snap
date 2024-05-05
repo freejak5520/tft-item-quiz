@@ -4,6 +4,28 @@ exports[`Item renders the item 1`] = `
 <div>
   <div
     class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow undefined"
+    data-testid="item-1"
+  >
+    <img
+      alt="test"
+      data-nimg="1"
+      decoding="async"
+      height="75"
+      loading="lazy"
+      src="/_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=256&q=75"
+      srcset="/_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=256&q=75 2x"
+      style="color: transparent;"
+      width="75"
+    />
+  </div>
+</div>
+`;
+
+exports[`Item renders the item empty 1`] = `
+<div>
+  <div
+    class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow undefined"
+    data-testid="item-undefined"
   >
     <img
       alt=""
@@ -13,6 +35,27 @@ exports[`Item renders the item 1`] = `
       loading="lazy"
       src="/_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=256&q=75"
       srcset="/_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=256&q=75 2x"
+      style="color: transparent;"
+      width="75"
+    />
+  </div>
+</div>
+`;
+
+exports[`Item renders the item test image 1`] = `
+<div>
+  <div
+    class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow undefined"
+    data-testid="item-1"
+  >
+    <img
+      alt="test"
+      data-nimg="1"
+      decoding="async"
+      height="75"
+      loading="lazy"
+      src="/_next/image?url=%2Fimg%2Fitems%2Ftest-image.webp&w=256&q=75"
+      srcset="/_next/image?url=%2Fimg%2Fitems%2Ftest-image.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2Ftest-image.webp&w=256&q=75 2x"
       style="color: transparent;"
       width="75"
     />

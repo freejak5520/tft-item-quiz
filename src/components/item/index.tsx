@@ -14,6 +14,7 @@ const Item = ({ item, onClick, active = false, size = 75 }: Props) => {
         onClick && "cursor-pointer"
       }`}
       onClick={onClick}
+      data-testid={"item-" + item?.id ?? "1"}
     >
       {active && (
         <div className="absolute left-0 top-0 h-full w-full border-2 border-green-700 bg-bg-950 bg-opacity-50"></div>
