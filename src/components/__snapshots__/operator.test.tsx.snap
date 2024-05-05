@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Operator renders the operator 1`] = `
+<div>
+  <div
+    class="p-4 text-xl text-font-950 dark:text-font-50"
+  />
+</div>
+`;
