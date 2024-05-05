@@ -1,6 +1,6 @@
-import BaseItems from "@/components/item/base-items";
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
+import BaseItems from "@/components/item/base-items";
 import items from "@/data/items/11.json";
 
 const baseItems = items.data.filter((item) => !item.baseItems);

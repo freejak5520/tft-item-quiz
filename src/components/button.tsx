@@ -1,5 +1,5 @@
 import { clsx } from "clsx";
-import { ButtonHTMLAttributes } from "react";
+import type { ButtonHTMLAttributes } from "react";
 
 type Size = "sm" | "md" | "lg" | "block";
 type Variant = "primary" | "default" | "danger";

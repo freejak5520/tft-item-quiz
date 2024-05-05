@@ -1,6 +1,6 @@
-import Item from "@/components/item";
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
+import Item from "@/components/item";
 
 const item = {
   id: 1,

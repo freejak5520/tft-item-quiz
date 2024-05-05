@@ -1,10 +1,10 @@
+import { clsx } from "clsx";
+import React from "react";
+import Providers from "../providers/Providers";
 import Footer from "@/components/footer";
 import Gnb from "@/components/gnb";
 import RootHead from "@/components/head";
 import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_TITLE } from "@/lib/constants";
-import { clsx } from "clsx";
-import React from "react";
-import Providers from "../providers/Providers";
 import "./globals.css";
 
 export const metadata = {

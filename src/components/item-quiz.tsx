@@ -1,13 +1,13 @@
 "use client";
 
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import Item from "@/components/item";
 import BaseItems from "@/components/item/base-items";
 import AnswerAlert from "@/components/modal/answer-alert";
 import Operator from "@/components/operator";
 import Separator from "@/components/separator";
 import useItemQuiz from "@/hooks/useItemQuiz";
-import Link from "next/link";
-import { useEffect, useState } from "react";
 
 const ItemQuiz = () => {
   const { qItem, checkAnswer, baseItems, getItemById, goNextRound } =
@@ -28,7 +28,7 @@ const ItemQuiz = () => {
 
     setDisabled(true);
 
-    const correct = checkAnswer(selectItems[0], selectItems[1]);
+    const correct = checkAnswer(selectItems[0]!, selectItems[1]!);
 
     setIsCorrect(correct);
     setAnswer(qItem?.baseItems ?? []);
@@ -62,7 +62,7 @@ const ItemQuiz = () => {
               if (disabled) return;
 
               setSelectItems((prev) => {
-                return prev.filter((value) => value.id != selectItems[0].id);
+                return prev.filter((value) => value.id != selectItems[0]?.id);
               });
             }}
             item={selectItems[0]}
@@ -78,7 +78,7 @@ const ItemQuiz = () => {
               if (disabled) return;
 
               setSelectItems((prev) => {
-                return prev.filter((value) => value.id != selectItems[1].id);
+                return prev.filter((value) => value.id != selectItems[1]?.id);
               });
             }}
             item={selectItems[1]}
