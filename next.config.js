@@ -1,5 +1,3 @@
-const isProd = process.env.NODE_ENV === "production";
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -13,7 +11,10 @@ const nextConfig = {
       },
     ];
   },
-  assetPrefix: isProd ? "https://items-cdn.zvdev.com" : undefined,
+  images: {
+    loader: "custom",
+    loaderFile: "./src/r2-loader.ts",
+  },
 };
 
 module.exports = nextConfig;

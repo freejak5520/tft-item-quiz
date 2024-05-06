@@ -10,6 +10,15 @@ on:
         type: boolean
         default: false
         required: false
+    secrets:
+      R2_ACCOUNT_ID:
+        required: true
+      R2_ACCESS_KEY_ID:
+        required: true
+      R2_SECRET_ACCESS_KEY:
+        required: true
+      R2_BUCKET_NAME:
+        required: true
 
 jobs:
   build:
@@ -35,9 +44,8 @@ jobs:
           r2-access-key-id: ${{ secrets.R2_ACCESS_KEY_ID }}
           r2-secret-access-key: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           r2-bucket: ${{ secrets.R2_BUCKET_NAME }}
-          source-dir: .next/static
-          destination-dir: ./_next/static
-
+          source-dir: public
+          destination-dir: ./
 
   # chromatic:
   #   needs: build
