@@ -1,5 +1,5 @@
-import AnswerAlert from "@/components/modal/answer-alert";
 import type { Meta, StoryObj } from "@storybook/react";
+import AnswerAlert from "@/components/modal/answer-alert";
 
 const meta = {
   title: "Modal/AnswerAlert",

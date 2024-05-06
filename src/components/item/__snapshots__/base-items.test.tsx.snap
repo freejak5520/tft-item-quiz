@@ -1,0 +1,460 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseItems renders the base items Season 10 1`] = `
+<div>
+  <div
+    class="mx-auto grid w-fit cursor-pointer grid-cols-3 gap-6 py-12"
+  >
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-1"
+    >
+      <img
+        alt="B.F. 대검"
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_BFSword.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_BFSword.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2FTFT_Item_BFSword.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-2"
+    >
+      <img
+        alt="곡궁"
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_RecurveBow.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_RecurveBow.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2FTFT_Item_RecurveBow.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-3"
+    >
+      <img
+        alt="쇠사슬 조끼"
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_ChainVest.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_ChainVest.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2FTFT_Item_ChainVest.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-4"
+    >
+      <img
+        alt="음전자 망토"
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_NegatronCloak.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_NegatronCloak.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2FTFT_Item_NegatronCloak.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-5"
+    >
+      <img
+        alt="쓸데없이 큰 지팡이"
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_NeedlesslyLargeRod.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_NeedlesslyLargeRod.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2FTFT_Item_NeedlesslyLargeRod.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-6"
+    >
+      <img
+        alt="여신의 눈물"
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_TearOfTheGoddess.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_TearOfTheGoddess.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2FTFT_Item_TearOfTheGoddess.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-7"
+    >
+      <img
+        alt="거인의 허리띠"
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_GiantsBelt.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_GiantsBelt.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2FTFT_Item_GiantsBelt.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-8"
+    >
+      <img
+        alt="연습용 장갑"
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_SparringGloves.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_SparringGloves.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2FTFT_Item_SparringGloves.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-9"
+    >
+      <img
+        alt="뒤집개"
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_Spatula.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_Spatula.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2FTFT_Item_Spatula.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`BaseItems renders the base items Season 11 1`] = `
+<div>
+  <div
+    class="mx-auto grid w-fit cursor-pointer grid-cols-3 gap-6 py-12"
+  >
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-1"
+    >
+      <img
+        alt="B.F. 대검"
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_BFSword.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_BFSword.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2FTFT_Item_BFSword.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-2"
+    >
+      <img
+        alt="곡궁"
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_RecurveBow.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_RecurveBow.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2FTFT_Item_RecurveBow.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-3"
+    >
+      <img
+        alt="쇠사슬 조끼"
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_ChainVest.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_ChainVest.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2FTFT_Item_ChainVest.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-4"
+    >
+      <img
+        alt="음전자 망토"
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_NegatronCloak.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_NegatronCloak.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2FTFT_Item_NegatronCloak.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-5"
+    >
+      <img
+        alt="쓸데없이 큰 지팡이"
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_NeedlesslyLargeRod.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_NeedlesslyLargeRod.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2FTFT_Item_NeedlesslyLargeRod.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-6"
+    >
+      <img
+        alt="여신의 눈물"
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_TearOfTheGoddess.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_TearOfTheGoddess.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2FTFT_Item_TearOfTheGoddess.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-7"
+    >
+      <img
+        alt="거인의 허리띠"
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_GiantsBelt.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_GiantsBelt.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2FTFT_Item_GiantsBelt.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-8"
+    >
+      <img
+        alt="연습용 장갑"
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_SparringGloves.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_SparringGloves.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2FTFT_Item_SparringGloves.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-9"
+    >
+      <img
+        alt="뒤집개"
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_Spatula.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2FTFT_Item_Spatula.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2FTFT_Item_Spatula.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`BaseItems renders the empty base items 1`] = `
+<div>
+  <div
+    class="mx-auto grid w-fit cursor-pointer grid-cols-3 gap-6 py-12"
+  >
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-1"
+    >
+      <img
+        alt=""
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-2"
+    >
+      <img
+        alt=""
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-3"
+    >
+      <img
+        alt=""
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-4"
+    >
+      <img
+        alt=""
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-5"
+    >
+      <img
+        alt=""
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-6"
+    >
+      <img
+        alt=""
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-7"
+    >
+      <img
+        alt=""
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-8"
+    >
+      <img
+        alt=""
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+    <div
+      class="relative flex h-fit w-fit flex-col items-center overflow-hidden rounded border-2 border-slate-600 p-0 shadow cursor-pointer"
+      data-testid="item-9"
+    >
+      <img
+        alt=""
+        data-nimg="1"
+        decoding="async"
+        height="70"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fitems%2Fgray.webp&w=256&q=75 2x"
+        style="color: transparent;"
+        width="70"
+      />
+    </div>
+  </div>
+</div>
+`;
