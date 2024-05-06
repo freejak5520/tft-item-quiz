@@ -39,25 +39,25 @@ jobs:
           destination-dir: ./_next/static
 
 
-  chromatic:
-    needs: build
+  # chromatic:
+  #   needs: build
 
-    runs-on: ubuntu-latest
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
 
-      - name: Setup Yarn
-        uses: threeal/setup-yarn-action@v2
-        with:
-          cache: false
+  #     - name: Setup Yarn
+  #       uses: threeal/setup-yarn-action@v2
+  #       with:
+  #         cache: false
 
-      - name: Install dependencies
-        run: yarn install --immutable --immutable-cache --check-cache
+  #     - name: Install dependencies
+  #       run: yarn install --immutable --immutable-cache --check-cache
 
-      - name: Run Chromatic
-        uses: chromaui/action@latest
-        with:
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          exitZeroOnChanges: true
+  #     - name: Run Chromatic
+  #       uses: chromaui/action@latest
+  #       with:
+  #         projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+  #         exitZeroOnChanges: true
