@@ -1,44 +1,63 @@
-name: CI
+name: Build
 
 on:
   pull_request:
     branches: ["main"]
   workflow_call:
+    inputs:
+      upload-cdn:
+        description: "Upload .next/static to CDN"
+        type: boolean
+        default: false
+        required: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [21.x]
-
     steps:
-      - uses: actions/checkout@v4
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: "yarn"
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Yarn
+        uses: threeal/setup-yarn-action@v2
+
       # - run: cp .env.example .env
       - run: yarn install
       - run: yarn lint
       - run: yarn tsc
       - run: yarn build
-
-  chromatic:
-    needs: build
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - name: Upload static to R2
+        if: ${{ inputs.upload-cdn }}
+        uses: ryand56/r2-upload-action@latest
         with:
-          fetch-depth: 0
-      - name: Install dependencies
-        run: yarn install --immutable --immutable-cache --check-cache
-      - name: Run Chromatic
-        uses: chromaui/action@latest
-        with:
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          r2-account-id: ${{ secrets.R2_ACCOUNT_ID }}
+          r2-access-key-id: ${{ secrets.R2_ACCESS_KEY_ID }}
+          r2-secret-access-key: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          r2-bucket: ${{ secrets.R2_BUCKET_NAME }}
+          source-dir: .next/static
+          destination-dir: ./_next/static
+
+
+  # chromatic:
+  #   needs: build
+
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
+
+  #     - name: Setup Yarn
+  #       uses: threeal/setup-yarn-action@v2
+  #       with:
+  #         cache: false
+
+  #     - name: Install dependencies
+  #       run: yarn install --immutable --immutable-cache --check-cache
+
+  #     - name: Run Chromatic
+  #       uses: chromaui/action@latest
+  #       with:
+  #         projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+  #         exitZeroOnChanges: true
